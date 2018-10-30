@@ -9,8 +9,9 @@ public class SalesRep extends AbstractActor {
     public Receive createReceive() {
         return receiveBuilder()
                 .match(String.class, s ->{
-                    
+                    log.info("Received String message: {}", s);
                 })
+                .matchAny(o -> log.info("received unknown message"))
                 .build();
     }
 }
