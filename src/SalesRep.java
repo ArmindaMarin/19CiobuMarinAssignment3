@@ -7,6 +7,10 @@ public class SalesRep extends AbstractActor {
 
     @Override
     public Receive createReceive() {
-        return null;
+        return receiveBuilder()
+                .match(String.class, s ->{
+                    
+                })
+                .build();
     }
 }
